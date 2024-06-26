@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Account</title>
+</head>
+<body>
+<h1>Add New Account</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label>Platform:</label>
+    <input type="text" name="platform"><br>
+    <label>Username:</label>
+    <input type="text" name="username"><br>
+    <label>Password:</label>
+    <input type="password" name="password"><br>
+    <label>Login Frequency (days):</label>
+    <input type="number" name="frequency"><br>
+    <button type="submit">Add Account</button>
+</form>
+</body>
+</html>
