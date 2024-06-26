@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<h1>Your Accounts</h1>
+<ul>
+    {% for account in accounts %}
+    <li>{{ account.platform }} - {{ account.username }} - Last Login: {{ account.last_login }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_account' %}">Add Account</a>
+</body>
+</html>
